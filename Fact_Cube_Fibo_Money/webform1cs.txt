@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Fact_Cube_Fib_Money
+{
+    
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public String fact(double num)
+        {
+            double fact = 1;
+            for (int i = 1; i <= num; i++)
+            {
+                fact = fact * i;
+            }
+
+            return fact.ToString();
+        }
+
+        public String usdToInr(double num)
+        {
+            return (num * 80).ToString();
+        }
+
+        public String cubeOf(double num)
+        {
+            return (num * num * num).ToString();
+        }
+
+        public String fibonaci(double num)
+        {
+            String fseries;
+            double num1 = 0, num2 = 1;
+            double num3;
+            fseries = num1 + "," + num2 + ",";
+            for (int i = 2; i < num; i++)
+            {
+                num3 = num1 + num2;
+                fseries += num3 + ",";
+                num1 = num2;
+                num2 = num3;
+            }
+            return fseries;
+        }
+
+        protected void factorial_Click(object sender, EventArgs e)
+        {
+            double n = Convert.ToDouble(TextBox1.Text);
+            Label1.Text = "Factorial of " + TextBox1.Text + " is: " + fact(n);
+            
+        }
+
+        protected void cube_Click(object sender, EventArgs e)
+        {
+            double n = Convert.ToDouble(TextBox1.Text);
+            Label1.Text = "cube of " + TextBox1.Text + " is: " + cubeOf(n);
+        }
+
+        protected void usdToInd_Click(object sender, EventArgs e)
+        {
+            double n = Convert.ToDouble(TextBox1.Text);
+            Label1.Text = TextBox1.Text + " dollar is: " + usdToInr(n) + " rupees";
+        }
+
+        protected void fibonacci_Click(object sender, EventArgs e)
+        {
+            double n = Convert.ToDouble(TextBox1.Text);
+            Label1.Text = "Fibonacci series " + TextBox1.Text + " is: " + fibonaci(n);
+        }
+
+     
+  
+
+    }
+}

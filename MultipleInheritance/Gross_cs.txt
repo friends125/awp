@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace MultipleInheritance
+{
+    interface Gross
+    {
+        int ta
+        {
+            get;
+            set;
+        }
+        int da
+        {
+            get;
+            set;
+        }
+        int GrossSal();
+    } 
+}

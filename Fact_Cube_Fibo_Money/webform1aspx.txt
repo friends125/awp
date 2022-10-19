@@ -1,0 +1,32 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Fact_Cube_Fib_Money.WebForm1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        <asp:Label ID="Label2" runat="server" 
+            Text="Enter a number to perform following Operations"></asp:Label>
+    
+    </div>
+    <asp:TextBox ID="TextBox1" runat="server" Width="368px"></asp:TextBox>
+    <br />
+    <br />
+    <asp:Button ID="factorial" runat="server" Text="Factorial" 
+        onclick="factorial_Click" />
+    &nbsp;<asp:Button ID="usdToInd" runat="server" Text="usdToInd" 
+        onclick="usdToInd_Click" />
+    &nbsp;<asp:Button ID="cube" runat="server" Text="Cube" onclick="cube_Click" />
+    &nbsp;<asp:Button ID="fibonacci" runat="server" Text="Fibonacci" 
+        onclick="fibonacci_Click" />
+    <br />
+    <br />
+    <asp:Label ID="Label1" runat="server" Text="Display Output"></asp:Label>
+    </form>
+</body>
+</html>
